@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THis is the landing page of the product website.</title>
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id = 'home'>
+
+  <div class="wrapper">
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">HeadPhones</h1>
+
+        <ul class="nav">
+          <li> <a href="#home"> Home </a> </li>
+          <li> <a href="#about"> About </a> </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- =============== SHOWCASE SECTION ========== -->
+
+    <section class="section-showcase">
+      <div class="container">
+        <div>
+          <h1>The HeadPhones of the Future.</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque doloremque assumenda nisi autem recusandae! Voluptatem officiis cupiditate delectus quo nisi.
+          </p>
+          <a class = 'btn' href="#"> Read More... </a>
+        </div>
+
+        <img src="images/image.jpeg" alt="This is the showcase Image.">
+      </div>
+    </section>
+
+    <!-- ========OVERLAY SECTION ============== -->
+    <section id ="about" class="section-overlay">
+      <div class="overlay">
+        <div class="overlay-inner">
+          <h2>LOUD & CLEAR.</h2>
+          <h3> People aren't hearing all the music. </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias non repudiandae magni repellat dolore! Omnis ab ullam perspiciatis saepe labore commodi esse nam voluptate cumque.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--============== THIS IS THE GALLERY SECTION  =============== -->
+
+    <section class="section-gallery">
+      <div class="gallery">
+        <a href="images/image3.jpeg" class = 'big'> <img src="images/image3.jpeg" alt="This is a gallery image"> </a>
+
+        <a href="images/image4.jpeg"  class = 'big'> <img src="images/image4.jpeg" alt="This is a gallery image"> </a>
+
+        <a href="images/image5.jpeg"  class = 'big'> <img src="images/image5.jpeg" alt="This is a gallery image"> </a>
+
+        <a href="images/image6.jpeg"  class = 'big'> <img src="images/image6.jpeg" alt="This is a gallery image"> </a>
+
+        <a href="images/image7.jpeg"  class = 'big'> <img src="images/image7.jpeg" alt="This is a gallery image"> </a>
+
+        <a href="images/image8.jpeg"  class = 'big'> <img src="images/image8.jpeg" alt="This is a gallery image"> </a>
+      </div>
+    </section>
+
+    <!-- =========== THIS IS THE FOOTER SECTION ================= -->
+
+    <footer class="section-footer">
+      <div class="container">
+
+        <div>
+          <h3>Lorem, ipsum dolor.</h3>
+          <a href="">Twitter</a>
+          <a href="">Facebook</a>
+          <a href="">Instagram</a>
+        </div>
+        
+        <div>
+          <h3>Company's Info.</h3>
+          <a href="">All Product</a>
+          <a href="">Privacy Policy</a>
+          <a href="">About Us</a>
+          <a href=""> Terms of Service. </a>
+        </div>
+
+        <div>
+          <h3>Blog Post.</h3>
+          <a href=""> Lorem, ipsum dolor. </a>
+          <a href="">Lorem, ipsum dolor.</a>
+          <a href="">Lorem ipsum dolor sit.</a>
+        </div>
+        
+        <div>
+          <h3>Subscribe.</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad optio ipsam blanditiis.
+          </p>
+
+          <form method = 'POST' data-netlify = "true">
+            <input class = 'email'  type="email" name = 'email' id= 'email' placeholder="Email...">
+            <button class = 'submit' type= 'submit'> &rarr; </button>
+          </form>
+        </div>
+
+      </div>
+    </footer>
+
+
+
+
+  </div>
+
+  <script src = 'js/jquery.js' ></script>
+  <script src = 'js/lightbox.js'></script>
+  <script>
+    $(function() {
+      const $gallery = $('.gallery a ').simpleLightbox();
+    })
+  </script>
+</body>
+</html>

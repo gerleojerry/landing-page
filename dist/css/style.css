@@ -1,0 +1,324 @@
+:root {
+  --primary-color : #333 ;
+  --secondary-color: #444;
+  --overlay-color: rgba(0,0,0, 0.7)
+}
+
+*  {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: verdana;
+  line-height: 1.6;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color)
+}
+
+img {
+  width: 100%;
+}
+
+h1,h2,h3,h4 {
+  line-height: 1.3;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+}
+
+.navbar .nav {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav a {
+  padding: 0 1rem;
+  transition: all 400ms ease;
+}
+
+.nav a:hover {
+  color: #555;
+}
+
+/* ========== This is the section for the showcase section ========= */
+
+section.section-showcase {
+  margin: 2rem 0;
+}
+
+.section-showcase .container {
+  display : grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  align-items : center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+
+.section-showcase  h1 {
+  font-size: 3rem;
+}
+
+.section-showcase p {
+  margin: 1rem 0;
+}
+
+
+
+/*================= STYLING THE OVERLAY SECTION =========== */
+
+
+section.section-overlay {
+  position : relative;
+  background-image: url('../images/image2.jpeg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  height: 600px;
+
+  }
+
+
+  .section-overlay .overlay-inner {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 860px;
+    padding: 5rem;
+  }
+
+  .overlay-inner h2 {
+    font-size: 4rem;
+    margin-top: 1rem;
+  }
+
+  .overlay-inner h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .overlay-inner p {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+  }
+
+
+  /* =============== GALLERY SECTION STYLING =============== */
+
+section.section-gallery .gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  grid-gap: .3rem;
+  height: 100%;
+}
+
+.gallery a:first-child {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+
+.gallery img {
+  height: 100%;
+}
+
+.gallery a:nth-child(2) {
+  grid-column:3/5 ;
+}
+
+
+/* =========== STYLING THE FOOTER ============== */
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: .4rem;
+}
+
+footer .container div {
+  display :flex;
+  flex-direction: column;
+}
+
+footer a {
+  color: #ccc;
+  line-height: 1.9;
+}
+
+.section-footer h3{
+  margin-bottom: 1rem;
+}
+
+footer form {
+  margin-top: 1rem;
+}
+
+.email {
+  margin-right: 0;
+  padding: 0.5rem .5rem;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  outline: 1px solid transparent;
+}
+
+.submit {
+  margin-left: -6px;
+  border-radius: 0 20px 20px 0;
+  padding: .5rem .5rem;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  color: white;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* ============  UTILITIES  STYLING =================  */
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 40px;
+  transition: all 300ms ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.btn:active {
+  transform: scale(0.97)
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--overlay-color) ;
+  color: white;
+}
+
+/* ================  MEDIA QUERIES =============== */
+
+@media (max-width: 700px ) {
+  .section-showcase .container{
+    grid-template-columns: 1fr;
+    text-align:center;
+    margin-top: 6rem;
+  }
+
+  .section-showcase .container > div:nth-child(1) {
+    order: 2;
+    margin-bottom: 3rem;
+  }
+
+  .section-showcase .container > div:nth-child(2) {
+    order: 1;
+    margin-bottom: 3rem;
+  }
+
+  .section-showcase img {
+    width: 80%;
+    margin: auto;
+  }
+
+  .overlay-inner h2 {
+    font-size: 2.8rem;
+  } 
+
+  .overlay-inner h3 {
+    font-size: 1.7rem;
+  }
+
+  /* section.section-gallery .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  } */
+
+  .gallery a:first-child {
+    grid-row: 1;
+    grid-column: 1 /4;
+  }
+  
+  .gallery a:nth-child(2) {
+    grid-row : 1 ;
+    grid-column: 4/-1 ;
+  }
+
+  .gallery a:nth-child(3) {
+    grid-row : 2 ;
+    grid-column: 1/3 ;
+  }
+
+  .gallery a:nth-child(4) {
+    grid-row : 2 ;
+    grid-column: 3/-1 ;
+  }
+
+  .gallery a:nth-child(5) {
+    grid-row : 3 ;
+    grid-column: 1/4 ;
+  }
+
+
+  .gallery a:last-child {
+    grid-row: 3;
+    grid-column: 4/-1;
+  }
+
+  footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container div:nth-child(2), .container div:nth-child(3) {
+    display: none;
+  }
+
+  .email {
+    width: 150px;
+  }
+}
